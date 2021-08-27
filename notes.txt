@@ -1,0 +1,6 @@
+mySQL notes:
+
+
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'mySQL@123#';
+
+flush privileges;

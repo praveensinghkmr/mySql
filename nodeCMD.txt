@@ -1,0 +1,298 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.
+
+Try the new cross-platform PowerShell https://aka.ms/pscore6
+
+PS C:\dbms\nodejsapps> npm init
+This utility will walk you through creating a package.json file.
+It only covers the most common items, and tries to guess sensible defaults.
+
+See `npm help init` for definitive documentation on these fields
+and exactly what they do.
+
+Use `npm install <pkg>` afterwards to install a package and
+save it as a dependency in the package.json file.
+
+Press ^C at any time to quit.
+package name: (nodejsapps)
+version: (1.0.0)
+description:
+entry point: (app1.js)
+test command:
+git repository:
+keywords:
+author:
+license: (ISC)
+About to write to C:\dbms\nodejsapps\package.json:
+
+{
+  "name": "nodejsapps",
+  "version": "1.0.0",
+
+
+Is this OK? (yes)
+PS C:\dbms\nodejsapps>
+PS C:\dbms\nodejsapps>
+PS C:\dbms\nodejsapps>
+PS C:\dbms\nodejsapps>
+PS C:\dbms\nodejsapps>
+PS C:\dbms\nodejsapps>
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN nodejsapps@1.0.0 No repository field.
+found 0 vulnerabilities
+error:ER_BAD_DB_ERROR: Unknown database 'sampledb'
+PS C:\dbms\nodejsapps> node connect.js
+PS C:\dbms\nodejsapps> node connect.js
+PS C:\dbms\nodejsapps> node connect.js
+Connected to the MySql server.
+PS C:\dbms\nodejsapps> node query.js
+PS C:\dbms\nodejsapps> node insert.js
+PS C:\dbms\nodejsapps> node insert.js
+ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '//            VALUES('Insert Row and Get ID','PKS',21)' at line 2
+PS C:\dbms\nodejsapps> node insert.js
+Book Id:2
+PS C:\dbms\nodejsapps> node insert.js
+ER_PARSE_ERROR: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?,?)' at line 2
+PS C:\dbms\nodejsapps> node insert.js
+Book Id:3
+PS C:\dbms\nodejsapps> node select,js
+  throw err;
+  ^
+
+Error: Cannot find module 'C:\dbms\nodejsapps\select,js'
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:880:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:725:27)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47 {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: []
+}
+PS C:\dbms\nodejsapps> node select.js
+[
+  RowDataPacket {
+    id: 1,
+    title: 'Learn how to insert a new row',
+    author: 'PKS',
+    price: 20
+  },
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  },
+  RowDataPacket {
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+PS C:\dbms\nodejsapps> node select.js
+let sql = `SELECT * FROM books WHERE price>?`;
+    ^
+
+SyntaxError: Identifier 'sql' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+PS C:\dbms\nodejsapps> node select.js
+[
+  RowDataPacket {
+    id: 1,
+    title: 'Learn how to insert a new row',
+    author: 'PKS',
+    price: 20
+  },
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  },
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+PS C:\dbms\nodejsapps> node select.js
+let sql = `SELECT * FROM books WHERE id=` + id ;
+    ^
+
+SyntaxError: Identifier 'sql' has already been declared
+    at wrapSafe (internal/modules/cjs/loader.js:979:16)
+    at Module._compile (internal/modules/cjs/loader.js:1027:27)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:1092:10)
+    at Module.load (internal/modules/cjs/loader.js:928:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:769:14)
+    at Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:72:12)
+    at internal/main/run_main_module.js:17:47
+PS C:\dbms\nodejsapps> node select.js
+[
+  RowDataPacket {
+    id: 1,
+    title: 'Learn how to insert a new row',
+    author: 'PKS',
+    price: 20
+  },
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  },
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    id: 3,
+    author: 'PKS',
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+PS C:\dbms\nodejsapps> node select.js
+ER_BAD_FIELD_ERROR: Unknown column 'undefined' in 'where clause'
+PS C:\dbms\nodejsapps> node select.js 2
+[
+  RowDataPacket {
+    id: 1,
+    title: 'Learn how to insert a new row',
+    author: 'PKS',
+    price: 20
+  },
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  },
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  }
+]
+PS C:\dbms\nodejsapps> node select.js 2
+[
+  RowDataPacket {
+    id: 1,
+    title: 'Learn how to insert a new row',
+    author: 'PKS',
+    price: 20
+  },
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  },
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    id: 3,
+    title: 'Insert Rows and Get ID - A',
+    author: 'PKS',
+    price: 22
+  },
+  RowDataPacket {
+    id: 4,
+    title: 'Insert Row and Get ID - B',
+    author: 'PKS',
+    price: 23
+  }
+]
+[
+  RowDataPacket {
+    id: 2,
+    title: 'Insert Row and Get ID',
+    author: 'PKS',
+    price: 21
+  }
+]
