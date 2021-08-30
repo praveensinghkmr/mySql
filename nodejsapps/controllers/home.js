@@ -6,10 +6,10 @@ const { response } = require("express");
 //    response.render("home.html", { title : "Home"});
 //}) ;
 
-let mysql = require('mysql');
-let config = require('../config.js');
+// let mysql = require('mysql');
+// let config = require('../config.js');
 
-let connection = mysql.createConnection(config);
+// let connection = mysql.createConnection(config);
 
 // var jsonData= "Test String";
 
@@ -32,15 +32,15 @@ router.get("/books", (request, response) => {
   
   var jsonData= "Test String";
 
-  let sql = `SELECT * FROM books`;
-  connection.query(sql, (error, results, fields) => {
-    if (error) {
-      return console.error(error.message);
-    }
-    console.log(results);
+  // let sql = `SELECT * FROM books`;
+  // connection.query(sql, (error, results, fields) => {
+  //   if (error) {
+  //     return console.error(error.message);
+  //   }
+  //   console.log(results);
   
-    jsonData = JSON.stringify(results);
-  });
+  //   jsonData = JSON.stringify(results);
+  // });
 
   response.json(jsonData);
 })
