@@ -29,8 +29,8 @@ const { response } = require("express");
 //     console.log(row.name)
 
 router.get("/books", (request, response) => {
-  
-  var jsonData= "Test String";
+
+  var jsonData = "Test String";
 
   // let sql = `SELECT * FROM books`;
   // connection.query(sql, (error, results, fields) => {
@@ -38,18 +38,27 @@ router.get("/books", (request, response) => {
   //     return console.error(error.message);
   //   }
   //   console.log(results);
-  
+
   //   jsonData = JSON.stringify(results);
   // });
 
-  response.json(jsonData);
+  response.json({
+    myBooks: [
+      {
+        id: '1',
+        name: "a",
+        category: "aaa",
+        price: 20
+      }
+    ]
+  });
 })
 
-router.get ( "/", (request, response) => { 
+router.get("/", (request, response) => {
 
-    response.render("home.html", { title : "Books"},);
-    // response.render("home.html", { title : "Books", books: jsonData},);
-    
-}) ;
+  response.render("home.html", { title: "Books" },);
+  // response.render("home.html", { title : "Books", books: jsonData},);
+
+});
 
 module.exports = router;
